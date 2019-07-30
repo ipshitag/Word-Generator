@@ -32,7 +32,7 @@ class RandomWordState extends State<RandomWords>
     {
       if(i.isOdd) return Divider();
       final index = i ~/ 2;
-      if( index > _suggestions.length)
+      if( index >= _suggestions.length)
         {
           _suggestions.addAll(generateWordPairs().take(10));
         }
